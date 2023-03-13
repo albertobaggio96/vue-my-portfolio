@@ -18,6 +18,7 @@
 </script>
 
 <style lang="scss" scoped>
+ @use '../styles/partials/variables.scss' as *;
   section{
     height: calc(100vh - 56px);
     background: #3482d0 ;
@@ -29,13 +30,13 @@
     }
 
     div{
-      box-shadow: 0px 0px 100px 100px #3482d0 ;
+      box-shadow: 0px 0px 100px 100px $blue-home ;
       background-color: #3482d0f9;
       animation: entrance 2s ease;  
     
     }
     .btn-project{
-      color: #FFF;
+      color: white;
       transition: all 0.5s;
       position: relative;
       height: 50px;
@@ -51,7 +52,7 @@
         width: 100%;
         border-radius: 50px;
 
-        background-color: #064199;
+        background-color: $blue-nav;
         transition: all 0.3s;
       }
       &:hover::before {
