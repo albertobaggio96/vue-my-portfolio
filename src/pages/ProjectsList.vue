@@ -1,15 +1,17 @@
 <template>
   <main>
-    <section class="row">
-      <div class="col-12 py-3 d-flex justify-content-between">
+    <section>
+      <div class=" py-3 d-flex justify-content-between">
         <button @click="prevPage()" class="btn btn-primary ms-5" :class="currentPage === 1 ? 'disabled' : ''">prev</button>
         <button @click="nextPage()" class="btn btn-primary me-5" :class="currentPage === lastPage ? 'disabled' : ''">next</button>
       </div>
-
-      <article class="card mb-3 col-4" v-for="project in projects">
-        <ProjectCard :project="project" />
-        <router-link :to="{ name: 'project', params: { slug: project.slug } }">Show</router-link>
-      </article>
+      <div class="container col">
+        <div class="row">
+          <article class="mb-5 g-6 col-4 position-relative" v-for="project in projects">
+            <ProjectCard :project="project" :show="false" />
+          </article>
+        </div>
+      </div>
     </section>
   </main>
 </template>
@@ -72,4 +74,5 @@ export default {
 </script>
 
 
-<style></style>
+<style lang="scss" scoped>
+</style>

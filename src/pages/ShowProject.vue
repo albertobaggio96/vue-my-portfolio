@@ -2,7 +2,7 @@
   <main>
     <section class="row">
       <article class="card mb-3 col-12">
-        <ProjectCard :project="project" />
+        <ProjectCard :project="project" :show="true"/>
       </article>
     </section>
   </main>
