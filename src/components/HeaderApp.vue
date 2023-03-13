@@ -1,24 +1,20 @@
 <template>
   <header>
-    <nav class="navbar navbar-expand-lg bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container d-flex">
+        <figure class="rounded-circle mb-0 me-3">
+          <img src="../assets/img/profile-picture.png" alt="AB"> 
+        </figure>
+        <router-link :to="{ name: 'about'}" class="navbar-brand">
+          Alberto Baggio
+        </router-link> 
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
               <router-link :to="{ name: 'home'}" class="nav-link">home</router-link> 
             </li>
             <li class="nav-item">
-              <router-link :to="{ name: 'about'}" class="nav-link">about</router-link> 
-            </li>
-            <li class="nav-item">
               <router-link :to="{ name: 'projects'}" class="nav-link">projects</router-link> 
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
             </li>
           </ul>
         </div>
@@ -33,6 +29,19 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+ @use '../styles/partials/variables.scss' as *;
   
+  nav{
+    background-color: $blue-nav;
+    color: white;
+    figure{
+      width: 56px;
+      height: 56px;
+      overflow: hidden;
+      img{
+        width: 100%;
+      }
+    }
+  }
 </style>
